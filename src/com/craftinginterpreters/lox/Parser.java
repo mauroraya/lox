@@ -1,4 +1,4 @@
-package com.craftinginterpreters.lox;
+package src.com.craftinginterpreters.lox;
 
 import java.util.List;
 
@@ -148,25 +148,25 @@ public class Parser {
         return new ParseError();
     }
 
-    private void synchronize() {
-        advance();
+    // private void synchronize() {
+    //     advance();
 
-        while (!isAtEnd()) {
-            if (previous().type == TokenType.SEMICOLON) return;
+    //     while (!isAtEnd()) {
+    //         if (previous().type == TokenType.SEMICOLON) return;
 
-            switch (peek().type) {
-                case TokenType.CLASS:
-                case TokenType.FUN:
-                case TokenType.VAR:
-                case TokenType.FOR:
-                case TokenType.IF:
-                case TokenType.WHILE:
-                case TokenType.PRINT:
-                case TokenType.RETURN:
-                    return;
-            }
+    //         switch (peek().type) {
+    //             case TokenType.CLASS:
+    //             case TokenType.FUN:
+    //             case TokenType.VAR:
+    //             case TokenType.FOR:
+    //             case TokenType.IF:
+    //             case TokenType.WHILE:
+    //             case TokenType.PRINT:
+    //             case TokenType.RETURN:
+    //                 return;
+    //         }
 
-            advance();
-        }
-    }
+    //         advance();
+    //     }
+    // }
 }

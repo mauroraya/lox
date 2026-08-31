@@ -1,4 +1,4 @@
-package com.craftinginterpreters.lox;
+package src.com.craftinginterpreters.lox;
 
 public class Interpreter implements Expr.Visitor<Object> {
     void interpret(Expr expression) {

@@ -1,4 +1,4 @@
-package com.craftinginterpreters.tools;
+package tools;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -29,7 +29,7 @@ public class GenerateAst {
         String path = outputDir + "/" + baseName + ".java";
         PrintWriter writer = new PrintWriter(path, "UTF-8");
 
-        writer.println("package com.craftinginterpreters.lox;");
+        writer.println("package src.com.craftinginterpreters.lox;");
 
         writer.println("abstract class " + baseName + " {");
 

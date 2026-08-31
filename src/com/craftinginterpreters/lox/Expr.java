@@ -1,4 +1,4 @@
-package com.craftinginterpreters.lox;
+package src.com.craftinginterpreters.lox;
 abstract class Expr {
     interface Visitor<R> {
         R visitBinaryExpr(Binary expr);
