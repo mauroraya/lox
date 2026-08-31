@@ -12,7 +12,7 @@ public class Parser {
         this.tokens = tokens;
     }
 
-    Expr parse() {
+    public Expr parse() {
         try {
             return expression();
         } catch (ParseError error) {
